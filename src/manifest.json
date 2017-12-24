@@ -1,0 +1,7 @@
+{
+  "name": "car-dashboard",
+  "short_name": "car-dashboard",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait"
+}
