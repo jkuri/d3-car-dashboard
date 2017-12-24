@@ -2,6 +2,12 @@
 
 Experiment with D3 data visualisation.
 
+## Preview
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/1796022/34329633-687a1190-e908-11e7-965a-1ffa2219803d.png">
+</p>
+
 ## CLI Commands
 
 ``` bash
@@ -24,4 +30,4 @@ MIT
 
 ## Author
 
-Jan Kuri <jan@bleenco.com> 2017 
+Jan Kuri <jan@bleenco.com> 2017
