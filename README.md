@@ -5,7 +5,7 @@ Experiment with D3 data visualisation.
 ## Preview
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/1796022/34329979-fb70d55e-e914-11e7-944b-656b89fa6792.gif">
+  <img src="https://user-images.githubusercontent.com/1796022/34330013-8b92e3ca-e915-11e7-9bd1-f2cbb041eeb8.gif">
 </p>
 
 ## CLI Commands
