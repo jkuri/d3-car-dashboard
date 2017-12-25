@@ -13,6 +13,10 @@ export default class RpmGauge extends Component {
     this.generate();
   }
 
+  componentWillUpdate() {
+    this.setValue(this.props.value, 10);
+  }
+
   generate() {
     const el = select('.rpm-gauge');
     const svg = el.append('svg').attr('width', '100%').attr('height', '100%');
@@ -88,7 +92,8 @@ export default class RpmGauge extends Component {
       .attr('x2', 0)
       .attr('y2', d => d % 5 === 0 ? '12' : '7')
       .attr('transform', d => {
-        const ratio = this.scale(d);
+        const scale = scaleLinear().range([0, 1]).domain([0, 80]);
+        const ratio = scale(d);
         const newAngle = minAngle + (ratio * angleRange);
         const deviation = d % 5 === 0 ? 12 : 17;
         return `rotate(${newAngle}) translate(0, ${deviation - r})`;
@@ -101,7 +106,8 @@ export default class RpmGauge extends Component {
       .data(ticksData)
       .enter().append('text')
       .attr('transform', d => {
-        const ratio = this.scale(d.value);
+        const scale = scaleLinear().range([0, 1]).domain([0, 80]);
+        const ratio = scale(d.value);
         const newAngle = this.degToRad(minAngle + (ratio * angleRange));
         const y = (55 - r) * Math.cos(newAngle);
         const x = -1 * (52 - r) * Math.sin(newAngle);
@@ -203,7 +209,7 @@ export default class RpmGauge extends Component {
   }
 
   scale(value) {
-    const s = scaleLinear().range([0, 1]).domain([0, 80]);
+    const s = scaleLinear().range([0, 1]).domain([0, 6000]);
     return s(value);
   }
 

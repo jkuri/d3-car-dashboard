@@ -9,6 +9,10 @@ export default class SpeedGauge extends Component {
     this.generate();
   }
 
+  componentWillUpdate() {
+    this.setValue(this.props.value, 10);
+  }
+
   generate() {
     const el = select('.speed-gauge');
     const svg = el.append('svg').attr('width', '100%').attr('height', '100%');
@@ -193,7 +197,7 @@ export default class SpeedGauge extends Component {
     const minAngle = -160;
     const maxAngle = 150;
     const angleRange = maxAngle - minAngle;
-    const angle = minAngle + (this.scale(value) * range);
+    const angle = minAngle + (this.scale(value) * angleRange);
 
     this.speedText.text(value);
     this.needle.transition()
