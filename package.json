@@ -1,9 +1,22 @@
 {
-  "private": true,
-  "name": "car-dashboard",
+  "name": "d3-car-dashboard",
   "version": "0.1.0",
   "license": "MIT",
   "author": "Jan Kuri <jan@bleenco.com>",
+  "description": "D3 data visualisation experiment - car dashboard",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jkuri/d3-car-dashboard.git"
+  },
+  "keywords": [
+    "d3",
+    "dataviz",
+    "car",
+    "dashboard",
+    "car-dashboard",
+    "preact"
+  ],
+  "homepage": "https://github.com/jkuri/d3-car-dashboard#readme",
   "scripts": {
     "start": "if-env NODE_ENV=production && npm run -s serve || npm run -s dev",
     "build": "preact build",
