@@ -1,12 +1,10 @@
 # car-dashboard
 
-Experiment with D3 data visualisation.
+Car dashboard experiment with D3 data visualisation.
 
 ## Preview
 
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/1796022/34330013-8b92e3ca-e915-11e7-9bd1-f2cbb041eeb8.gif">
-</p>
+<img src="https://user-images.githubusercontent.com/1796022/39537668-8fcd7a60-4e3a-11e8-85f0-235d2ffdfc9f.gif">
 
 ## CLI Commands
 
