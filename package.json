@@ -1,6 +1,6 @@
 {
   "name": "d3-car-dashboard",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "license": "MIT",
   "author": "Jan Kuri <jan@bleenco.com>",
   "description": "D3 data visualisation experiment - car dashboard",
