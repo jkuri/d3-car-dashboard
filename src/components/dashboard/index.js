@@ -1,7 +1,6 @@
 import { h, Component } from 'preact';
-import { Observable } from 'rxjs/Observable';
-import 'rxjs/add/observable/interval';
-import 'rxjs/add/operator/timeInterval';
+import { interval } from 'rxjs';
+import { timeInterval } from 'rxjs/operators';
 
 import InfoTop from '../info-top';
 import InfoBottom from '../info-bottom';
@@ -38,9 +37,8 @@ export default class Dashboard extends Component {
     document.addEventListener('keydown', this.handleKeyDown.bind(this), false);
     document.addEventListener('keyup', this.handleKeyUp.bind(this), false);
 
-    this.subscription = Observable
-      .interval(10)
-      .timeInterval()
+    this.subscription = interval(10)
+      .pipe(timeInterval())
       .subscribe(() => {
         if (this.state.acc) {
           if (this.state.speed < 300) {
