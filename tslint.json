@@ -3,12 +3,19 @@
   "extends": [
     "tslint:recommended"
   ],
-  "jsRules": {},
   "rules": {
     "no-var-requires": false,
     "quotemark": [
       true,
       "single"
+    ],
+    "no-console": [
+      true,
+      "debug",
+      "info",
+      "time",
+      "timeEnd",
+      "trace"
     ]
   },
   "rulesDirectory": []
