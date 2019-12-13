@@ -1,10 +1,14 @@
-# car-dashboard
+# D3 Car Dashboard Experiment
 
 Car dashboard experiment with D3 data visualisation and React.
 
 ## Preview
 
-<img src="https://user-images.githubusercontent.com/1796022/39537668-8fcd7a60-4e3a-11e8-85f0-235d2ffdfc9f.gif">
+![Preview](https://user-images.githubusercontent.com/1796022/70824182-f1374600-1de1-11ea-98dd-f1fee06e7fd0.gif)
+
+## Instructions
+
+Use UP arrow key to add throttle.
 
 ## CLI Commands
 
