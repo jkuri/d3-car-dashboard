@@ -23,16 +23,12 @@
     "start": "webpack-dev-server --config ./config/webpack.dev.js --open",
     "build": "webpack --config ./config/webpack.prod.js",
     "prebuild": "rimraf ./dist",
-    "build:server": "tsc -p ./tsconfig.server.json",
+    "build:server": "webpack --config ./config/webpack.server.js",
     "build:all": "npm run build && npm run build:server",
     "serve": "node ./dist/server.js",
     "preserve": "npm run build:all",
     "lint": "tslint --project ./tsconfig.json",
     "docker": "docker build -t d3-car-dashboard ."
-  },
-  "dependencies": {
-    "compression": "^1.7.4",
-    "express": "^4.17.1"
   },
   "devDependencies": {
     "@types/compression": "^1.0.1",
@@ -42,10 +38,12 @@
     "@types/react": "^16.9.16",
     "@types/react-dom": "^16.9.4",
     "awesome-typescript-loader": "^5.2.1",
+    "compression": "^1.7.4",
     "compression-webpack-plugin": "^3.0.1",
     "copy-webpack-plugin": "^5.1.1",
     "css-loader": "^3.3.2",
     "d3": "^5.14.2",
+    "express": "^4.17.1",
     "file-loader": "^5.0.2",
     "html-webpack-plugin": "^3.2.0",
     "http-server": "^0.12.0",
@@ -59,6 +57,7 @@
     "style-loader": "^1.0.1",
     "terser": "^4.4.2",
     "terser-webpack-plugin": "^2.3.0",
+    "ts-loader": "^6.2.1",
     "tslint": "^5.20.1",
     "typescript": "^3.7.3",
     "webpack": "^4.41.2",
