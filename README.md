@@ -1,6 +1,6 @@
 # car-dashboard
 
-Car dashboard experiment with D3 data visualisation.
+Car dashboard experiment with D3 data visualisation and React.
 
 ## Preview
 
@@ -10,16 +10,16 @@ Car dashboard experiment with D3 data visualisation.
 
 ``` bash
 # install dependencies
-npm install
+yarn install
 
-# serve with hot reload at localhost:8080
-npm run dev
+# serve with save reload at localhost:8080
+yarn start
 
 # build for production with minification
-npm run build
+yarn build
 
 # test the production build locally
-npm run serve
+yarn serve
 ```
 
 ## Licence
@@ -28,4 +28,4 @@ MIT
 
 ## Author
 
-Jan Kuri <jan@bleenco.com> 2017
+Jan Kuri <jkuri88@gmail.com>
