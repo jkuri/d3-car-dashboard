@@ -23,7 +23,7 @@ export class Dashboard extends React.Component<{}, IDashboardState> {
     this.state = {
       acc: false,
       rpm: 0,
-      speed: 0,
+      speed: 0
     };
   }
 
@@ -58,10 +58,7 @@ export class Dashboard extends React.Component<{}, IDashboardState> {
         }
       });
 
-    this.subs
-      .add(keyDown)
-      .add(keyUp)
-      .add(keyInterval);
+    this.subs.add(keyDown).add(keyUp).add(keyInterval);
   }
 
   public componentWillUnmount() {
@@ -70,11 +67,11 @@ export class Dashboard extends React.Component<{}, IDashboardState> {
 
   public render() {
     return (
-      <div className='dashboard'>
-        <div className='dashboard-body'>
-          <div className='container'>
+      <div className="dashboard">
+        <div className="dashboard-body">
+          <div className="container">
             <InfoTop />
-            <img src='/images/map.png' className='map' />
+            <img src="/images/map.png" className="map" />
             <InfoMap />
             <InfoBottom />
             <RpmGauge value={this.state.rpm} />

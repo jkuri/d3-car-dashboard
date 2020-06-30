@@ -7,9 +7,7 @@ export class InfoBottom extends React.Component<{}, undefined> {
   }
 
   public render() {
-    return (
-      <div className='info-bottom'></div>
-    );
+    return <div className="info-bottom"></div>;
   }
 
   private generate() {

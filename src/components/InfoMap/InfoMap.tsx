@@ -7,9 +7,7 @@ export class InfoMap extends React.Component<{}, undefined> {
   }
 
   public render() {
-    return (
-      <div className='info-map'></div>
-    );
+    return <div className="info-map"></div>;
   }
 
   private generate() {

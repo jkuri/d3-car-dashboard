@@ -8,9 +8,7 @@ export class InfoTop extends React.Component<{}, undefined> {
   }
 
   public render() {
-    return (
-      <div className='info-top'></div>
-    );
+    return <div className="info-top"></div>;
   }
 
   private generate() {

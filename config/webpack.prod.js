@@ -5,7 +5,7 @@ const CompressionPlugin = require('compression-webpack-plugin');
 
 module.exports = merge(config, {
   mode: 'production',
-  devtool: 'source-map',
+  devtool: 'none',
   optimization: {
     minimize: true,
     minimizer: [
@@ -13,12 +13,12 @@ module.exports = merge(config, {
         cache: true,
         terserOptions: {
           output: {
-            comments: false,
-          },
+            comments: false
+          }
         },
-        extractComments: false,
-      }),
-    ],
+        extractComments: false
+      })
+    ]
   },
   plugins: [
     new CompressionPlugin({
@@ -26,7 +26,7 @@ module.exports = merge(config, {
       algorithm: 'gzip',
       test: /\.js$|\.css$|\.html$/,
       threshold: 10240,
-      minRatio: 0.8,
-    }),
+      minRatio: 0.8
+    })
   ]
 });

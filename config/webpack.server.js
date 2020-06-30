@@ -16,9 +16,7 @@ module.exports = {
     filename: '[name].js'
   },
   module: {
-    rules: [
-      { test: /\.ts$/, loaders: ['ts-loader?silent=true&configFile=tsconfig.server.json'] },
-    ]
+    rules: [{ test: /\.ts$/, loaders: ['ts-loader?silent=true&configFile=tsconfig.server.json'] }]
   },
   optimization: {
     minimize: true,
@@ -27,12 +25,12 @@ module.exports = {
         cache: true,
         terserOptions: {
           output: {
-            comments: false,
-          },
+            comments: false
+          }
         },
-        extractComments: false,
-      }),
-    ],
+        extractComments: false
+      })
+    ]
   },
   stats: {
     assets: false,

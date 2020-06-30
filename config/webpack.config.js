@@ -23,15 +23,11 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: ['style-loader', { loader: 'css-loader', options: { importLoaders: 1 } }],
+        use: ['style-loader', { loader: 'css-loader', options: { importLoaders: 1 } }]
       },
       {
         test: /\.(scss|sass)$/,
-        loaders: [
-          'style-loader',
-          { loader: 'css-loader', options: { importLoaders: 1 } },
-          'sass-loader',
-        ],
+        loaders: ['style-loader', { loader: 'css-loader', options: { importLoaders: 1 } }, 'sass-loader']
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/,
@@ -42,10 +38,12 @@ module.exports = {
   plugins: [
     new CheckerPlugin(),
     new HtmlWebPackPlugin({ template: './index.html' }),
-    new CopyPlugin([{ from: './assets/images', to: './images' }])
+    new CopyPlugin({
+      patterns: [{ from: './assets/images', to: './images' }]
+    })
   ],
   performance: {
-    hints: false,
+    hints: false
   },
   optimization: {
     splitChunks: {
@@ -54,9 +52,21 @@ module.exports = {
           test: /node_modules/,
           chunks: 'initial',
           name: 'vendor',
-          enforce: true,
-        },
-      },
-    },
+          enforce: true
+        }
+      }
+    }
   },
+  stats: {
+    assets: false,
+    chunks: false,
+    chunkModules: false,
+    colors: true,
+    timings: true,
+    children: false,
+    cachedAssets: false,
+    chunkOrigins: false,
+    modules: false,
+    warnings: false
+  }
 };

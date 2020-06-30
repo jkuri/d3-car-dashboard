@@ -6,7 +6,7 @@ import { Dashboard } from './components/Dashboard/Dashboard';
 export class App extends React.Component<{}, undefined> {
   public render() {
     return (
-      <div className='app'>
+      <div className="app">
         <Dashboard />
       </div>
     );
