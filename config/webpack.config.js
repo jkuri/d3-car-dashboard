@@ -27,11 +27,24 @@ module.exports = {
       },
       {
         test: /\.(scss|sass)$/,
-        loaders: ['style-loader', { loader: 'css-loader', options: { importLoaders: 1 } }, 'sass-loader']
+        use: [
+          'style-loader',
+          { loader: 'css-loader', options: { importLoaders: 1 } },
+          'resolve-url-loader',
+          'sass-loader'
+        ]
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/,
-        use: ['file-loader?name=fonts/[name].[ext]']
+        use: {
+          loader: 'file-loader',
+          options: {
+            name: '[name].[ext]',
+            outputPath: 'fonts/',
+            include: resolve(__dirname, '../src/assets/fonts'),
+            esModule: false
+          }
+        }
       }
     ]
   },

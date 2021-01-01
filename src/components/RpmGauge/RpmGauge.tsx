@@ -142,7 +142,7 @@ export class RpmGauge extends React.Component<IRpmGaugeProps> {
       .attr('transform', `translate(${r}, ${r})`)
       .attr('z-index', '1');
 
-    this.needle = ng.append('path').attr('d', needleLine).attr('transform', `rotate(${-160})`);
+    this.needle = ng.append('path').attr('d', needleLine as any).attr('transform', `rotate(${-160})`);
 
     // inner circle
     const tg = svg.append('g').attr('transform', `translate(${r}, ${r})`);
