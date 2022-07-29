@@ -16,7 +16,7 @@ Use UP arrow key to add throttle.
 # install dependencies
 npm install
 
-# serve with save reload at localhost:8080
+# serve with live reload
 npm start
 
 # build for production with minification
