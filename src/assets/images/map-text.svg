@@ -1,15 +1,5 @@
-<svg width="350px" height="50px" viewBox="179 208 350 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-  <g id="Group" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(179.000000, 208.000000)">
-    <rect id="Rectangle" fill="#3378F6" x="0" y="0" width="350" height="50" rx="8"></rect>
-    <path d="M288,8.5 L288,38.5" id="Line" stroke="#FFFFFF" stroke-width="2" stroke-linecap="square"></path>
-    <g id="back" transform="translate(15.000000, 11.000000)" fill="#FFFFFF">
-      <path d="M9.1,9.05 C15.2,9.05 20.1,13.95 20.1,20.05 L20.1,23.05 C20.1,23.65 20.5,24.05 21.1,24.05 L23.1,24.05 C23.7,24.05 24.1,23.65 24.1,23.05 L24.1,20.05 C24.1,11.75 17.4,5.05 9.1,5.05 L8.5,5.05 C8.1,5.05 7.8,4.55 8.1,4.15 L9.1,3.15 C9.3,2.95 9.4,2.75 9.4,2.45 C9.4,2.15 9.3,1.95 9.1,1.75 L7.7,0.35 C7.5,0.15 7.3,0.05 7,0.05 C6.7,0.05 6.5,0.15 6.3,0.35 L0.3,6.35 C0.1,6.55 7.21644966e-16,6.85 7.21644966e-16,7.05 C7.21644966e-16,7.35 0.1,7.55 0.3,7.75 L6.3,13.75 C6.5,13.95 6.7,14.05 7,14.05 C7.3,14.05 7.5,13.95 7.7,13.75 L9.1,12.35 C9.3,12.15 9.4,11.95 9.4,11.65 C9.4,11.35 9.3,11.15 9.1,10.95 L8.1,9.95 C7.8,9.65 8,9.05 8.5,9.05 L9.1,9.05 L9.1,9.05 Z" id="Shape"></path>
-    </g>
-    <text id="7th-Ave,-New-York…" font-family="Helvetica" font-size="20" font-weight="normal" fill="#FFFFFF">
+<svg width="350" height="50" viewBox="179 208 350 50" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd" transform="translate(179 208)"><rect fill="#3378F6" width="350" height="50" rx="8"/><path d="M288 8.5v30" stroke="#FFF" stroke-width="2" stroke-linecap="square"/><path d="M24.1 20.05c6.1 0 11 4.9 11 11v3c0 .6.4 1 1 1h2c.6 0 1-.4 1-1v-3c0-8.3-6.7-15-15-15h-.6c-.4 0-.7-.5-.4-.9l1-1c.2-.2.3-.4.3-.7 0-.3-.1-.5-.3-.7l-1.4-1.4c-.2-.2-.4-.3-.7-.3-.3 0-.5.1-.7.3l-6 6c-.2.2-.3.5-.3.7 0 .3.1.5.3.7l6 6c.2.2.4.3.7.3.3 0 .5-.1.7-.3l1.4-1.4c.2-.2.3-.4.3-.7 0-.3-.1-.5-.3-.7l-1-1c-.3-.3-.1-.9.4-.9h.6Z" fill="#FFF"/><text font-family="Helvetica" font-size="20" fill="#FFF">
       <tspan x="84" y="30">7th Ave, New York…</tspan>
-    </text>
-    <text id="100m" font-family="Helvetica" font-size="14" font-weight="normal" fill="#FFFFFF">
+    </text><text font-family="Helvetica" font-size="14" fill="#FFF">
       <tspan x="299" y="29">100m</tspan>
-    </text>
-  </g>
-</svg>
+    </text></g></svg>
