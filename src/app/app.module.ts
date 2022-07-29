@@ -9,7 +9,15 @@ import { RpmGaugeComponent } from './components/rpm-gauge/rpm-gauge.component';
 import { SpeedGaugeComponent } from './components/speed-gauge/speed-gauge.component';
 
 @NgModule({
-  declarations: [AppComponent, DashboardComponent, InfoBottomComponent, InfoMapComponent, InfoTopComponent, RpmGaugeComponent, SpeedGaugeComponent],
+  declarations: [
+    AppComponent,
+    DashboardComponent,
+    InfoBottomComponent,
+    InfoMapComponent,
+    InfoTopComponent,
+    RpmGaugeComponent,
+    SpeedGaugeComponent
+  ],
   imports: [BrowserModule],
   bootstrap: [AppComponent]
 })

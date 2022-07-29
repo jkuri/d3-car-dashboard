@@ -1,27 +1,32 @@
-# D3CarDashboard
+# D3 Car Dashboard Experiment
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.0.
+Car dashboard experiment with D3 and Angular.
 
-## Development server
+## Preview
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+![Preview](https://user-images.githubusercontent.com/1796022/181828142-31859265-5b36-4328-9b07-c41090df08ab.gif)
 
-## Code scaffolding
+## Instructions
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Use UP arrow key to add throttle.
 
-## Build
+## CLI Commands
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+``` bash
+# install dependencies
+npm install
 
-## Running unit tests
+# serve with save reload at localhost:8080
+npm start
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+# build for production with minification
+npm build
+```
 
-## Running end-to-end tests
+## Licence
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+MIT
 
-## Further help
+## Author
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Jan Kuri <jkuri88@gmail.com>
