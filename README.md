@@ -20,7 +20,7 @@ npm install
 npm start
 
 # build for production with minification
-npm build
+npm run build
 ```
 
 ## Licence
