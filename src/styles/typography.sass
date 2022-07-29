@@ -1,0 +1,12 @@
+=font-face($family, $path, $weight: normal, $style: normal)
+  @font-face
+    font-family: $family
+    font-weight: $weight
+    font-style: $style
+    src: url("#{$path}.woff2") format("woff2"), url("#{$path}.woff") format("woff")
+
++font-face('Roboto', '/assets/fonts/Roboto/roboto-v20-latin-300', 300, 'normal')
++font-face('Roboto', '/assets/fonts/Roboto/roboto-v20-latin-regular', 400, 'normal')
++font-face('Roboto', '/assets/fonts/Roboto/roboto-v20-latin-500', 500, 'normal')
++font-face('Roboto', '/assets/fonts/Roboto/roboto-v20-latin-700', 700, 'normal')
++font-face('Roboto', '/assets/fonts/Roboto/roboto-v20-latin-900', 900, 'normal')

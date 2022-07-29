@@ -1,10 +1,29 @@
 {
   "name": "d3-car-dashboard",
-  "version": "0.0.0",
+  "version": "0.4.0",
+  "license": "MIT",
+  "author": "Jan Kuri <jkuri88@gmail.com>",
+  "description": "D3 data visualisation experiment - car dashboard",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jkuri/d3-car-dashboard.git"
+  },
+  "keywords": [
+    "d3",
+    "dataviz",
+    "car",
+    "dashboard",
+    "car-dashboard",
+    "angular",
+    "ng",
+    "car",
+    "dashboard"
+  ],
+  "homepage": "https://github.com/jkuri/d3-car-dashboard#readme",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
+    "start": "ng serve --port 45100 --open",
+    "build": "ng build --configuration production",
     "watch": "ng build --watch --configuration development"
   },
   "private": true,
@@ -17,6 +36,7 @@
     "@angular/platform-browser": "^14.1.0",
     "@angular/platform-browser-dynamic": "^14.1.0",
     "@angular/router": "^14.1.0",
+    "d3": "^7.6.1",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
@@ -25,6 +45,8 @@
     "@angular-devkit/build-angular": "^14.1.0",
     "@angular/cli": "~14.1.0",
     "@angular/compiler-cli": "^14.1.0",
+    "@types/d3": "^7.4.0",
+    "prettier": "^2.7.1",
     "typescript": "~4.7.2"
   }
 }
