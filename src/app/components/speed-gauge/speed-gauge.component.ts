@@ -1,7 +1,7 @@
 import { Component, ElementRef, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { arc, easeCubicInOut, line, range, select, Selection, transition } from 'd3';
-import { DEFAULT_REFRESH_RATE } from 'src/app/shared/const';
-import { degToRad, scale } from 'src/app/shared/helpers';
+import { DEFAULT_REFRESH_RATE } from '../../shared/const';
+import { degToRad, scale } from '../../shared/helpers';
 
 @Component({
   selector: 'app-speed-gauge',

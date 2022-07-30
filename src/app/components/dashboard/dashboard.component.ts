@@ -1,6 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { filter, fromEvent, interval, Subscription, tap, timeInterval } from 'rxjs';
-import { DEFAULT_REFRESH_RATE } from 'src/app/shared/const';
+import { DEFAULT_REFRESH_RATE } from '../../shared/const';
 
 @Component({
   selector: 'app-dashboard',
