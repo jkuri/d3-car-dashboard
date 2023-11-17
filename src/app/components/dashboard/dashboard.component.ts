@@ -54,11 +54,9 @@ export class DashboardComponent implements OnInit, OnDestroy {
         })
       );
 
-    this.sub.add(...[
-      keyDown$.subscribe(),
-      keyUp$.subscribe(),
-      interval$.subscribe()
-    ]);
+    this.sub.add(keyDown$.subscribe());
+    this.sub.add(keyUp$.subscribe());
+    this.sub.add(interval$.subscribe());
   }
 
   ngOnDestroy(): void {
