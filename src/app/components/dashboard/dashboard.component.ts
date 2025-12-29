@@ -17,13 +17,13 @@ import { InfoBottomComponent } from '../info-bottom/info-bottom.component';
   ],
   template: `
     <div class="flex w-full min-h-screen items-center justify-center overflow-hidden bg-black select-none" (mousedown)="startAccel($event)" (touchstart)="startAccel($event)" (mouseup)="stopAccel()" (touchend)="stopAccel()" (mouseleave)="stopAccel()">
-      <div class="relative block w-[1400px] min-w-[1400px] h-[500px] z-[99] origin-center" [style.transform]="'scale(' + scale() + ')'">
-        <app-info-top class="block w-[740px] h-20 absolute left-[330px] top-0 z-10"></app-info-top>
-        <img src="/assets/images/map.png" class="block w-[1200px] h-[300px] absolute top-[85px] left-[100px] z-0" />
-        <app-info-map class="block w-[460px] h-[220px] absolute top-[90px] left-[475px] z-10"></app-info-map>
-        <app-info-bottom class="block w-[460px] h-[200px] absolute top-[310px] left-[475px] z-10"></app-info-bottom>
-        <app-rpm-gauge [value]="rpm()" [gear]="gear()" class="block w-[400px] h-[400px] absolute left-20 top-20 z-20"></app-rpm-gauge>
-        <app-speed-gauge [value]="speed()" class="block w-[400px] h-[400px] absolute top-20 right-[70px] z-20"></app-speed-gauge>
+      <div class="relative block w-350 min-w-350 h-125 z-99 origin-center" [style.transform]="'scale(' + scale() + ')'">
+        <app-info-top class="block w-185 h-20 absolute left-82.5 top-0 z-10"></app-info-top>
+        <img src="/assets/images/map.png" class="block w-300 h-75 absolute top-21.25 left-25 z-0" />
+        <app-info-map class="block w-115 h-55 absolute top-22.5 left-118.75 z-10"></app-info-map>
+        <app-info-bottom class="block w-115 h-50 absolute top-77.5 left-118.75 z-10"></app-info-bottom>
+        <app-rpm-gauge [value]="rpm()" [gear]="gear()" class="block w-100 h-100 absolute left-20 top-20 z-20"></app-rpm-gauge>
+        <app-speed-gauge [value]="speed()" class="block w-100 h-100 absolute top-20 right-17.5 z-20"></app-speed-gauge>
       </div>
     </div>
   `,
