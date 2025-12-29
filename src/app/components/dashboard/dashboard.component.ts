@@ -39,7 +39,7 @@ export class DashboardComponent implements OnInit, OnDestroy {
 
   private animationFrameId: number | null = null;
   private readonly gearMaxSpeeds = [100, 160, 210, 240, 260, 300];
-  private readonly gearAccelRates = [0.3, 0.25, 0.2, 0.15, 0.1, 0.08];
+  private readonly gearAccelRates = [0.4, 0.3, 0.2, 0.15, 0.1, 0.08];
 
   @HostListener('document:keydown', ['$event'])
   handleKeyDown(event: KeyboardEvent): void {
