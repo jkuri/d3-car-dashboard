@@ -3,7 +3,8 @@ import { select } from 'd3';
 
 @Component({
   selector: 'app-info-map',
-  template: `<div class="info-map"></div>`
+  template: `<div class="info-map w-full h-full"></div>`,
+  standalone: true
 })
 export class InfoMapComponent implements OnInit {
   constructor(private readonly elementRef: ElementRef) { }

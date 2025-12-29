@@ -1,30 +1,29 @@
-import { Component, ElementRef, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import { Component, effect, ElementRef, input, OnInit } from '@angular/core';
 import { arc, easeCubicInOut, line, range, select, Selection, transition } from 'd3';
 import { DEFAULT_REFRESH_RATE } from '../../shared/const';
 import { degToRad, scale } from '../../shared/helpers';
 
 @Component({
   selector: 'app-speed-gauge',
-  template: `<div class="speed-gauge"></div>`
+  template: `<div class="speed-gauge w-full h-full"></div>`,
+  standalone: true
 })
-export class SpeedGaugeComponent implements OnInit, OnChanges {
-  @Input() value: number = 0;
+export class SpeedGaugeComponent implements OnInit {
+  value = input<number>(0);
 
   private needle!: Selection<SVGPathElement, number[][], null, undefined>;
   private speedText!: Selection<SVGTextElement, unknown, null, undefined>;
 
-  constructor(private readonly elementRef: ElementRef) { }
+  constructor(private readonly elementRef: ElementRef) {
+    effect(() => {
+      if (this.needle) {
+        this.setValue(this.value(), DEFAULT_REFRESH_RATE);
+      }
+    });
+  }
 
   ngOnInit(): void {
     this.generate();
-  }
-
-  ngOnChanges(changes: SimpleChanges): void {
-    if (!this.needle) {
-      return;
-    }
-
-    this.setValue(this.value, DEFAULT_REFRESH_RATE);
   }
 
   private generate(): void {
@@ -205,7 +204,7 @@ export class SpeedGaugeComponent implements OnInit, OnChanges {
     const angleRange = maxAngle - minAngle;
     const angle = minAngle + scale(value, 300) * angleRange;
 
-    this.speedText.text(value);
+    this.speedText.text(Math.round(value));
 
     transition()
       .select(() => this.needle.node())

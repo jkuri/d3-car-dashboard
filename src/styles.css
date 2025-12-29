@@ -1,0 +1,56 @@
+@import 'tailwindcss';
+
+@layer base {
+  html,
+  body {
+    @apply antialiased bg-black text-white w-full h-full;
+  }
+
+  /* Roboto font faces */
+  @font-face {
+    font-family: 'Roboto';
+    font-weight: 300;
+    font-style: normal;
+    src: url('/assets/fonts/Roboto/roboto-v20-latin-300.woff2') format('woff2'),
+      url('/assets/fonts/Roboto/roboto-v20-latin-300.woff') format('woff');
+  }
+
+  @font-face {
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-style: normal;
+    src: url('/assets/fonts/Roboto/roboto-v20-latin-regular.woff2')
+        format('woff2'),
+      url('/assets/fonts/Roboto/roboto-v20-latin-regular.woff') format('woff');
+  }
+
+  @font-face {
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-style: normal;
+    src: url('/assets/fonts/Roboto/roboto-v20-latin-500.woff2') format('woff2'),
+      url('/assets/fonts/Roboto/roboto-v20-latin-500.woff') format('woff');
+  }
+
+  @font-face {
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-style: normal;
+    src: url('/assets/fonts/Roboto/roboto-v20-latin-700.woff2') format('woff2'),
+      url('/assets/fonts/Roboto/roboto-v20-latin-700.woff') format('woff');
+  }
+
+  @font-face {
+    font-family: 'Roboto';
+    font-weight: 900;
+    font-style: normal;
+    src: url('/assets/fonts/Roboto/roboto-v20-latin-900.woff2') format('woff2'),
+      url('/assets/fonts/Roboto/roboto-v20-latin-900.woff') format('woff');
+  }
+}
+
+@theme {
+  --font-family-sans: Roboto, BlinkMacSystemFont, -apple-system, Segoe UI,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, Helvetica,
+    Arial, sans-serif;
+}

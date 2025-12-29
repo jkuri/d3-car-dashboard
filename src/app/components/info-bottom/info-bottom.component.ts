@@ -3,7 +3,8 @@ import { select } from 'd3';
 
 @Component({
   selector: 'app-info-bottom',
-  template: `<div class="info-bottom"></div>`
+  template: `<div class="info-bottom w-full h-full"></div>`,
+  standalone: true
 })
 export class InfoBottomComponent implements OnInit {
   constructor(private readonly elementRef: ElementRef) { }

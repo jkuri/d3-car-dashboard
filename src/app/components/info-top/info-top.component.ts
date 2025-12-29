@@ -3,7 +3,8 @@ import { range, select } from 'd3';
 
 @Component({
   selector: 'app-info-top',
-  template: `<div class="info-top"></div>`
+  template: `<div class="info-top w-full h-full"></div>`,
+  standalone: true
 })
 export class InfoTopComponent implements OnInit {
   constructor(private readonly elementRef: ElementRef) { }
