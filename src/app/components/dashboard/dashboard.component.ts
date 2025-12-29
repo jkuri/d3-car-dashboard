@@ -5,6 +5,7 @@ import { RpmGaugeComponent } from '../rpm-gauge/rpm-gauge.component';
 import { InfoTopComponent } from '../info-top/info-top.component';
 import { InfoMapComponent } from '../info-map/info-map.component';
 import { InfoBottomComponent } from '../info-bottom/info-bottom.component';
+import { MapComponent } from '../map/map.component';
 
 @Component({
   selector: 'app-dashboard',
@@ -13,14 +14,15 @@ import { InfoBottomComponent } from '../info-bottom/info-bottom.component';
     RpmGaugeComponent,
     InfoTopComponent,
     InfoMapComponent,
-    InfoBottomComponent
+    InfoBottomComponent,
+    MapComponent
   ],
   template: `
-    <div class="flex w-full min-h-screen items-center justify-center overflow-hidden bg-black select-none" (mousedown)="startAccel($event)" (touchstart)="startAccel($event)" (mouseup)="stopAccel()" (touchend)="stopAccel()" (mouseleave)="stopAccel()">
+    <div class="flex w-full min-h-screen items-center justify-center overflow-hidden bg-black select-none" (touchstart)="startAccel($event)" (touchend)="stopAccel()">
       <div class="relative block w-350 min-w-350 h-125 z-99 origin-center" [style.transform]="'scale(' + scale() + ')'">
         <app-info-top class="block w-185 h-20 absolute left-82.5 top-0 z-10"></app-info-top>
-        <img src="/assets/images/map.png" class="block w-300 h-75 absolute top-21.25 left-25 z-0" />
-        <app-info-map class="block w-115 h-55 absolute top-22.5 left-118.75 z-10"></app-info-map>
+        <app-map class="block w-300 h-75 absolute top-21.25 left-25 z-0 overflow-hidden" (locationFound)="onLocationFound($event)"></app-map>
+        <app-info-map class="block w-115 h-55 absolute top-22.5 left-118.75 z-10" [address]="address()"></app-info-map>
         <app-info-bottom class="block w-115 h-50 absolute top-77.5 left-118.75 z-10"></app-info-bottom>
         <app-rpm-gauge [value]="rpm()" [gear]="gear()" class="block w-100 h-100 absolute left-20 top-20 z-20"></app-rpm-gauge>
         <app-speed-gauge [value]="speed()" class="block w-100 h-100 absolute top-20 right-17.5 z-20"></app-speed-gauge>
@@ -36,6 +38,7 @@ export class DashboardComponent implements OnInit, OnDestroy {
   speed = signal(0);
   gear = signal(1);
   scale = signal(1);
+  address = signal('Locating...');
 
   private animationFrameId: number | null = null;
   private readonly gearMaxSpeeds = [100, 160, 210, 240, 260, 300];
@@ -72,6 +75,41 @@ export class DashboardComponent implements OnInit, OnDestroy {
   ngOnDestroy(): void {
     if (this.animationFrameId !== null) {
       cancelAnimationFrame(this.animationFrameId);
+    }
+  }
+
+  onLocationFound(coords: { lat: number, lng: number }): void {
+    this.fetchAddress(coords.lat, coords.lng);
+  }
+
+  private async fetchAddress(lat: number, lng: number): Promise<void> {
+    try {
+      // Use OpenStreetMap Nominatim for reverse geocoding
+      const response = await fetch(`https://nominatim.openstreetmap.org/reverse?format=json&lat=${lat}&lon=${lng}`);
+      const data = await response.json();
+
+      if (data && data.address) {
+        // Construct a nice address string
+        const street = data.address.road || data.address.pedestrian || '';
+        const number = data.address.house_number || '';
+        const city = data.address.city || data.address.town || data.address.village || '';
+
+        let formattedAddress = '';
+        if (street) formattedAddress += street;
+        if (number) formattedAddress += ` ${number}`;
+        if (city) formattedAddress += `, ${city}`;
+
+        if (!formattedAddress) {
+          formattedAddress = data.display_name.split(',').slice(0, 2).join(',');
+        }
+
+        this.address.set(formattedAddress.trim());
+      } else {
+        this.address.set('Unknown Location');
+      }
+    } catch (error) {
+      console.error('Error fetching address:', error);
+      this.address.set('Address Unavailable');
     }
   }
 
